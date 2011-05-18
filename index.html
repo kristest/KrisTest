@@ -1,1 +1,617 @@
- hey im just editing this file
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MatchMeUp</title>
+<style>
+
+
+img{
+	border: none;
+}
+a{
+	text-decoration: none;	
+}
+h1 {
+    font-size: 30px;
+	font-family: Arial Rounded MT Bold, Arial, sans-serif;
+    padding: 0px;
+	;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    padding: 0px;
+    ;
+    margin: 0px;
+    margin-bottom: 2px;
+}
+h3 {
+    font-size: 20px;
+    padding: 0px;
+    ;
+    margin: 0px;
+    margin-bottom: 2px;
+}
+h4 {
+    font-size: 16px;
+    padding: 0px;
+    ;
+    margin: 0px;
+    margin-bottom: 2px;
+}
+hr {
+    height: 1px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-color: #e5e5e5;
+	margin-bottom: 5px;
+}
+
+body{
+	background-image:url(images/bg.jpg);
+	background-attachment:fixed;
+	background-repeat:repeat-x;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	height: 100%; <!--ADDED-->
+}
+#header{
+	height: 71px;
+	width: 100%;
+	background-image:url(images/header.jpg);
+}
+.container{
+	margin: 0 auto 0 auto;
+	width: 960px;
+	height: 100%;
+	position: relative;
+}
+#logo{
+	width: 333px;
+	height: 71px;
+}
+#create_match{
+	width: 74px;
+	height: 44px;
+	position: absolute;
+	top: 13px;
+	right: 0px;
+	
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+		
+	/* Gradients */
+	background-image:url(images/navbtn_bg.png);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#2b6ea3), to(#093866));
+	background: -moz-linear-gradient(top, #4eaaca, #174b85);
+		
+	/* TEXT SHADOW   
+    text-shadow: 1px 1px 1px #333; */
+	
+	/* BOX SHADOW */  
+    -moz-box-shadow: 0 1px 3px #333;  
+    -webkit-box-shadow: 0 1px 3px #333;  
+    box-shadow: 0 1px 3px #333;
+}
+#todays_match{
+	width: 74px;
+	height: 44px;
+	position: absolute;
+	top: 13px;
+	right: 90px;
+	
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+		
+	/* Gradients */
+	background-image:url(images/navbtn_bg.png);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#2b6ea3), to(#093866));
+	background: -moz-linear-gradient(top, #4eaaca, #174b85);
+		
+	/* TEXT SHADOW   
+    text-shadow: 1px 1px 1px #333; */
+	
+	/* BOX SHADOW */  
+    -moz-box-shadow: 0 1px 3px #333;  
+    -webkit-box-shadow: 0 1px 3px #333;  
+    box-shadow: 0 1px 3px #333;
+}
+#create_match_text{
+	padding: 5px;
+	text-align: center;
+}
+#create_match_text a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 13px;
+}
+#sub_header{
+	height: 41px;
+	width: 100%;
+	background-image:url(images/sub_header.jpg);
+}
+#slogan{
+	height: 81px;
+	padding-top: 10px;
+}
+#pagination{
+	height: 81px;
+	padding-top: 2px;
+}
+#page{
+	list-style:none;
+}
+#page li{
+	float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;
+	top: -7px;	
+    padding: 5px 10px 5px 10px;  
+    margin-right:5px;   
+    border:1px solid #e4dfdf;
+}
+#page li:hover{
+	background: #e4dfdf;
+}
+.exclamation{
+	font-size: 44px;
+	color: #1c548c;
+}
+.blue{
+	color: #1c548c;
+	font-weight: bold;
+}
+.grey{
+	color: #949392;
+	font-weight: bold;
+}
+
+#x_button{
+	background-image:url(images/xbtn_bg.png);
+	width: 29px;
+	height: 29px;
+	float: left;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: 1px solid #e4dfdf;
+}
+#x_button a{
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px;
+}
+#more_button{
+	background: #276a9f;
+	width: 51px;
+	height: 25px;
+	float: left;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px 5px 0px 0px;
+}
+#more_button a{
+	text-decoration: none;
+	font-size: 15px;
+	position: relative;
+	top: 5px;
+	left: 8px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;	
+}
+#content{
+	height: 100%;
+	margin-top: 20px;
+}
+#content_left{
+	float: left;
+	margin-right: 10px;
+}
+#post{
+	width: 440px;
+	height: 100%;
+	background: #fff;
+	padding: 15px;
+	position: relative;
+	
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+    border: 1px solid #a4a4a4;  
+	
+	/* BOX SHADOW */  
+    -moz-box-shadow: 0 1px 3px #333;  
+    -webkit-box-shadow: 0 1px 3px #333;  
+    box-shadow: 0 1px 3px #333;
+	
+	<!--background-image:url(images/post_bg.png);-->
+}
+#img_container{
+	width: 100%;
+	height: 200px;
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+    border: 1px solid #e5e5e5;
+}
+#img_container img:hover{
+	opacity:0.8;
+	cursor: pointer;
+}
+#img_left_container{
+	width: 280px;
+	height: 100%;
+	float: left;
+}
+#img_right_container{
+	width: 160px;
+	height: 100%;
+	float: left;
+}
+#name_container{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+#tagline{
+	position: relative;
+	top: -10px;
+}
+#post_footer{
+	height: 25px;
+	background: #e4dfdf;
+	margin-top: 5px;
+	padding-top: 15px;
+}
+#days_remaining{
+	position: relative;
+	top: 0px;
+	left: 10%;
+}
+#number_matches{
+	position: relative;
+	top: 0px;
+	left: 50%;
+}
+#matched_with{
+	position: relative;
+	top: 0px;
+	left: 10%;
+}
+#match_rating{
+	position: relative;
+	top: 0px;
+	left: 40%;
+}
+.red{
+	color: #d0081c;
+	font-weight: bold;
+}
+#form{
+	width: 440px;
+	height: 100%;
+	margin-top: 10px;
+	background: #fff;
+	padding: 15px;
+	position: relative;
+	
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+    border: 1px solid #a4a4a4;  
+	
+	/* BOX SHADOW */  
+    -moz-box-shadow: 0 1px 3px #333;  
+    -webkit-box-shadow: 0 1px 3px #333;  
+    box-shadow: 0 1px 3px #333;
+}
+#form_title{
+	width: 100%;
+	height: 30px;
+}
+#form_days{
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+#form_container{
+	width: 100%;
+	height: 80px;
+}
+input, textarea { 
+	padding: 5px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100% Verdana, Tahoma, sans-serif;
+	width: 100px;
+	float: left;
+	margin-right: 5px;
+}
+textarea { 
+	width: 300px;
+	height: 25px;
+	line-height: 150%;
+}
+input:hover, textarea:hover,
+input:focus, textarea:focus { 
+	border-color: #C9C9C9; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+}
+.submit input {
+	width: auto;
+	padding: 9px 15px;
+	background: #276a9f;
+	position: relative;
+	top: 5px;
+	right: 3px;
+	border: 0;
+	font-weight: bold;
+	color: #FFFFFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor: pointer;
+}
+#form_img input{
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+.fakefile {
+	position: absolute;
+	top: 43px;
+	left: -10px;
+	z-index: 1;
+}
+.fakefile input{
+	width: 20px;
+}
+#matches{
+	width: 440px;
+	height: 100%;
+	margin-top: 10px;
+	background: #fff;
+	padding: 15px;
+	position: relative;
+	
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+    border: 1px solid #a4a4a4;  
+	
+	/* BOX SHADOW */  
+    -moz-box-shadow: 0 1px 3px #333;  
+    -webkit-box-shadow: 0 1px 3px #333;  
+    box-shadow: 0 1px 3px #333;
+}
+#matches_title{
+	width: 100%;
+	height: 30px;
+}
+#matches_number{
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+#match_container{
+	width: 440px;
+	height: 100%;
+}
+#match_image{
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+#content_right{
+	float: left;
+	margin-right: 4px;
+}
+#image_gallery{
+	height: 100%;
+	margin-top: 20px;
+}
+#image_gallery_inner{
+	width: 920px;
+	height: 100%;
+	background: #fff;
+	padding: 15px;
+	position: relative;
+	background-repeat: no-repeat;
+	
+	/* BORDER RADIUS */  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    border-radius: 5px;  
+    border: 1px solid #a4a4a4;  
+	
+	/* BOX SHADOW */  
+    -moz-box-shadow: 0 1px 3px #333;  
+    -webkit-box-shadow: 0 1px 3px #333;  
+    box-shadow: 0 1px 3px #333;
+}
+#image_container img{
+	float: left;
+	margin-right: 6px;
+}
+#image_container img:hover{
+	opacity:0.8;
+	cursor: pointer;
+}
+#footer{
+	background-image:url(images/sub_header.jpg);
+	height: 20px;
+	padding: 10px;
+	position:absolute;
+	bottom:-65px;
+	right: 0px;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+
+	<div id="header">
+		<div class="container">
+			<div id="nav">
+
+				<div id="logo">
+					<a href="index.html"><img src="images/logo.png"></a>
+				</div>
+				<div id="todays_match">
+					<div id="create_match_text"><a href="index.html">Todays Match</a></div>
+				</div>
+				<div id="create_match">
+					<div id="create_match_text"><a href="create_match.html">Create Match</a></div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+
+		</div>
+	</div><!--END HEADER -->
+	
+	<div id="sub_header">
+		<div class="container">
+			<div id="pagination">
+				<ul id="page">
+					<div><li><a href=""><span class="blue">1</span></a></li></div>
+					<div><li><a href=""><span class="blue">2</span></a></li></div>
+					<div><li><a href=""><span class="blue">3</span></a></li></div>
+					<div><li><a href=""><span class="blue">4</span></a></li></div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div id="content">
+		<div class="container">
+			<div id="content_left">
+
+				<div id="post">
+					<!--FEATURED IMAGE-->
+					<div id="img_container">
+						<div id="img_left_container">
+							<img src="images/jake_1.jpg" width="270" height="200">
+						</div>
+						<div id="img_right_container">
+							<img src="images/jake_2.jpg" width="160" height="98" style="margin-bottom: 5px;">
+							<img src="images/jake_3.jpg" width="160" height="98">
+						</div>
+					</div>
+					<!--END FEATURED IMAGE-->
+					<div id="name_container">
+						<div id="name"><p><span class="blue" style="font-size: 30px;">Jake Guerra</span></p></div>
+
+						<div id="tagline"><p style="font-weight: bold">Lets Go Bar Hopping In Atlantic Avenue!</p></div>
+					</div>
+					<br>
+					<div id="post_footer">
+						<div id="matched_with" style="float: left;"><b>Matched Up With:</b> <span class="blue">Sara Keller</span></div>
+						<div id="match_rating" style="float: left;"><b>Rating: </b> <span class="red">Hot</span></div>
+					</div>
+					<div id="match_container" style="margin-top: 10px;">
+						<div id="match_image"><img src="images/sara.jpg"></div>
+						<div id="match_name"><span class="blue">Sara Keller</span></div>
+						<div id="match_content">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <span class="blue">(more)</span></div>
+						<div id="match_time"><span class="grey">Friday 6:30pm</span></div>
+						<hr>
+						<div style="clear:both;"></div>
+					</div>
+				</div><!--END POST-->
+				
+				
+			</div>	
+			<div id="content_right">
+				<div id="post">
+					<!--FEATURED IMAGE-->
+					<div id="img_container">
+						<div id="img_left_container">
+							<img src="images/ali_1.jpg" width="270" height="200">
+						</div>
+						<div id="img_right_container">
+							<img src="images/ali_2.jpg" width="160" height="98" style="margin-bottom: 5px;">
+							<img src="images/ali_3.jpg" width="160" height="98">
+						</div>
+					</div>
+					<!--END FEATURED IMAGE-->
+					<div id="name_container">
+						<div id="name"><p><span class="blue" style="font-size: 30px;">Ali Rodrigues</span></p></div>
+						<div id="tagline"><p style="font-weight: bold">Lets Go Bar Hopping In Atlantic Avenue!</p></div>
+					</div>
+					<br>
+					<div id="post_footer">
+						<div id="matched_with" style="float: left;"><b>Matched Up With:</b> <span class="blue">Sara Keller</span></div>
+						<div id="match_rating" style="float: left;"><b>Rating: </b> <span class="red">Hot</span></div>
+					</div>
+					<div id="match_container" style="margin-top: 10px;">
+						<div id="match_image"><img src="images/sara.jpg"></div>
+						<div id="match_name"><span class="blue">Sara Keller</span></div>
+						<div id="match_content">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <span class="blue">(more)</span></div>
+						<div id="match_time"><span class="grey">Friday 6:30pm</span></div>
+						<hr>
+						<div style="clear:both;"></div>
+					</div>
+					
+				</div><!--END POST-->
+
+			</div><!--END CONTENT RIGHT-->
+			<div style="clear:both;"></div>
+		</div><!--END CONTAINER -->
+	</div><!--END CONTENT-->
+	
+	<!-- PRE CONTENT IMAGES -->
+	<div id="image_gallery">
+		<div class="container">
+			<div id="image_gallery_inner">
+				<div id="top_matches"><span class="blue"><h4>Top Matches 100+</h4></span></div>
+				<div id="image_container">
+					<div><img src="images/create_match/1.png" height=100 width=110 style="margin-left: 5px;"></div>
+					<div><img src="images/create_match/5.png" height=100 width=110></div>
+					<div><img src="images/create_match/3.png" height=100 width=110></div>
+					<div><img src="images/create_match/4.png" height=100 width=110></div>
+					<div><img src="images/create_match/2.png" height=100 width=110></div>
+					<div><img src="images/create_match/6.png" height=100 width=105></div>
+					<div><img src="images/create_match/7.png" height=100 width=105></div>
+					<div><img src="images/create_match/8.png" height=100 width=105></div>
+					
+					
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PRE CONTENT IMAGES -->
+	
+	<div id="footer">
+		<div class="container">
+			<div id="trademark" style="text-align: center;"><span class="blue"><a href="index.html" style="text-decoration: none; color: #1c548c; font-weight: bold;">MatchMeUp</a></span> <span class="grey">a Kris Reynolds Production</span></div>
+		</div><!--END CONTAINER-->
+	</div><!--END FOOTER-->
+
+</body>
+</html>
